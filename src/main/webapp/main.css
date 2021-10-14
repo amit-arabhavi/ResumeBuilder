@@ -1,0 +1,121 @@
+body {
+    color: #233143;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+header{
+    height: 85px;
+    border: none;
+    font-weight: 500;
+}
+.grid{
+    position: relative;
+    max-width: 117rem;
+}
+.text_center{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+.text_center p{
+    max-width: 55rem;
+    font-size: 20px;
+}
+.template_grid{
+    
+    max-width: 33.33%;
+    margin: 6px;
+    width: 29%;
+    padding: 0 15px;
+}
+.main_grid{
+    max-width: 117.4rem;
+    padding-right: 1.7rem;
+    padding-left: 1.7rem;
+    position: relative;
+    width: 100%;
+    min-height: .1rem;
+    box-sizing: border-box;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin: 0 auto;
+}
+.grid_row{
+    display: -webkit-flex;
+    display: flex;
+    min-height: .1rem;
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -1rem;
+    margin-left: -1rem;
+}
+
+input{
+    border: 1px solid #d7dde2;
+    height: 30px;
+}
+i{
+    font-size: 15px;
+    color: #15ac31;
+}
+.tempale_box{
+    box-sizing:  border-box;
+    margin-right: 20px;
+}
+.template_img{
+    width: 100%;
+    height: auto;
+}
+a{
+    cursor: pointer;
+}
+.container{
+    width: 960px;
+}
+.data-row{
+    margin-right: 15px;
+    margin-left: -15px;
+    display: flex;
+}
+.page-title-wrap{
+    padding: 4vh 0;
+}
+.page-title{
+    font-family: HK Grotesk,sans-serif;
+    font-size: 25px;
+    color: #3983fa;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+.clsTextInput{
+    width: 90%;
+}
+.form-label{
+    font-weight: 600;
+}
+.cls-row{
+    margin-bottom: 25px;
+}
+.clsTextInput:focus{
+    border: 1px solid #48a4ff;
+    outline: none;
+}
+.icon {
+    padding: 15px;
+    color: rgb(49, 0, 128);
+    width: 70px;
+    text-align: left;
+ }
+ .subTitle{
+    color: #666;
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 400;
+    margin-bottom: 5px;
+ }

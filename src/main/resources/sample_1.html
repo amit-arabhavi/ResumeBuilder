@@ -1,0 +1,192 @@
+<html>
+    <style>
+        #personalDiv li{
+            margin-bottom: 0px;
+        }
+        .parentDiv{
+            border-bottom: solid 2px #A8A8A8; 
+        }
+        .personaltag{
+            margin: 20px 0px 0px 5px;
+            
+        }
+        .mainlabel{
+            color: brown;
+            margin: 5px;
+            text-transform: uppercase;
+        }
+        .list-title{
+            width: 20%;
+            display: table-cell;
+        }
+        .list-data{
+            display: table-cell; 
+        }
+        .list-row{
+            width: 100%;
+            display: table;
+        }
+        .data-list{
+            list-style: none;
+        }
+        h3{
+            margin-top: 0px;
+        }
+        #WorkExpDiv li,#EducationDiv li {
+            margin-bottom: 20px;
+        }
+		.tableRow{
+			display: table-row;
+			height: 20px;
+		}
+		
+    </style>
+    <body>
+        <div class="parentDiv" style="padding: 5px;">
+            <h1 class="mainlabel">Curriculum Vitae</h1>
+        </div>
+		<div class="personaltag parentDiv" id="personalDiv">
+            <h2 class="mainlabel">personal</h4>
+                <ol class="data-list" >
+                    <li id="name">
+                        <div class="list-row">
+                            <div class="tableRow">
+                                <div class="list-title" >Name</div>
+                                <div class="list-data" ><h3 th:text="${name}"> </h3></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="phoneNumber">
+                        <div class="list-row">
+                            <div class="tableRow">
+                                <div class="list-title">Contact No</div>
+                                <div class="list-data"> <h3 th:text="${phoneNumber}">  </h3></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="emailDiv">
+                        <div class="list-row">
+                            <div class="tableRow">
+                                <div class="list-title">Email</div>
+                                <div class="list-data"> <h3 th:text="${email}"></h3></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="addressLine">
+                        <div class="list-row">
+                            <div class="tableRow">
+                                <div class="list-title">Address</div>
+                                <div class="list-data"> <h3 th:text="${address}"> </h3></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="birthDate">
+                        <div class="list-row">
+                            <div class="tableRow">
+                                <div class="list-title">Date of birth</div>
+                                <div class="list-data"> <h3 th:text="${birthDate}"></h3></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="gender">
+                        <div class="list-row">
+                            <div class="tableRow">
+                                <div class="list-title">gender</div>
+                                <div class="list-data"> <h3 th:text="${gender}"></h3></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="nationality">
+                        <div class="list-row">
+                            <div class="tableRow">
+                                <div class="list-title">Nationality</div>
+                                <div class="list-data"> <h3 th:text="${nationality}"></h3></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="maritalStatus">
+                        <div class="list-row">
+                            <div class="tableRow">
+                                <div class="list-title">Marital status</div>
+                                <div class="list-data"> <h3 th:text="${maritalStatus}"></h3></div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+		</div>
+        <div class="parentDiv personaltag" id="title">
+            <h2 class="mainlabel">Resume objective</h2>
+            <div style="width: 100%; padding-left: 30px;">
+                <p th:text="${title}"></p>
+            </div>
+        </div>
+        <div class="parentDiv personaltag" id="WorkExpDiv" >
+            <h2 class="mainlabel">Work experiance</h2>
+            <ol class="data-list" >
+                <li class="listItem" th:each ="Experiance : ${worExperiance}">
+                    <div class="list-row">
+                        <div class="tableRow">
+                            <div class="list-title" th:text="${Experiance.duration}"></div>
+                            <div class="list-data">
+                                <div><h3 th:text="${Experiance.jobTitle}"></h3> </div>
+                                <div><h3 th:text="${Experiance.employer}"> </h3></div>
+                                <div><p th:text="${Experiance.workDesc}"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+            </ol>
+        </div>
+        <div class="parentDiv personaltag" id="EducationDiv">
+            <h2 class="mainlabel"> Educational Qualifications</h2>
+            <ol class="data-list" >
+                <li class="listItem" th:each="Education: ${educationalDetails}">
+                    <div class="list-row">
+                        <div class="tableRow">
+                            <div class="list-title" th:text="${Education.duration}"></div>
+                            <div class="list-data">
+                                <div><h3 th:text="${Education.degree}"> </h3> </div>
+                                <div><h3 th:text="${Education.school}"> </h3></div>
+                                <div><p th:text="${Education.percentage}"></p></div>
+                            </div>
+                        </div>
+                </li>
+            </ol>
+        </div>
+        <div class="parentDiv personaltag" id="interestDiv" >
+            <h2 class="mainlabel">Interests</h2>
+                <ol class="data-list" >
+                    <li class="listItem"> Cricket</li>
+                    <li class="listItem"> football</li>
+                </ol>
+        </div>
+        <div class="parentDiv personaltag" id="skillDiv">
+            <h2 class="mainlabel"> Skills </h2>
+                <ol class="data-list" >
+                        <li th:each="Skill: ${skills}">
+                            <div class="list-row">
+                                <div class="tableRow">
+                                    <div class="list-title" th:text="${Skill.skill}"></div>
+                                    <div class="list-data"><h3 th:text="${Skill.level}"> </h3></div>
+                                </div>
+                            </div>
+                        </li>
+                </ol>
+        </div>
+        
+        <div class="parentDiv personaltag" id="languageDiv">
+            <h2 class="mainlabel"> Skills </h2>
+                <ol class="data-list" >
+                        <li th:each="Language: ${languages}">
+                            <div class="list-row">
+                                <div class="tableRow">
+                                    <div class="list-title" th:text="${Language.language}"></div>
+                                    <div class="list-data"><h3 th:text="${Language.level}"> </h3></div>
+                                </div>
+                            </div>
+                        </li>
+                </ol>
+        </div>
+    </body>
+</html>
